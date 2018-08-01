@@ -9,7 +9,7 @@
  * @param path - Path expression used to take value from object.
  * @param placeholder - Returned when value is undefined or unreachable.
  */
-const take = (object: object, path: string, placeholder: any = null) => {
+const take = (object: object, path: string, placeholder?: any) => {
   try {
     const expression = 'return o' + (path[0] !== '[' ? '.' + path : path);
     const value = new Function('o', expression)(object);
