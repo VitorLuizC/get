@@ -2,9 +2,21 @@
   "name": "object-take",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/object-take.cjs.js",
+  "types": "index.d.ts",
+  "module": "dist/object-take.es.js",
+  "browser": "dist/object-take.js",
+  "files": [
+    "dist/",
+    "LICENSE",
+    "README.md",
+    "index.d.ts"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:typescript": "tsc index.ts --target es2015 --declaration --strict",
+    "build:bili": "bili index.js --formats es,umd,cjs --js buble --banner",
+    "build": "yarn build:typescript && yarn build:bili"
   },
   "repository": {
     "type": "git",
@@ -19,5 +31,9 @@
   "bugs": {
     "url": "https://github.com/VitorLuizC/object-take/issues"
   },
-  "homepage": "https://github.com/VitorLuizC/object-take#readme"
+  "homepage": "https://github.com/VitorLuizC/object-take#readme",
+  "devDependencies": {
+    "bili": "^3.1.2",
+    "typescript": "^3.0.1"
+  }
 }
