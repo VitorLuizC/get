@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/VitorLuizC/object-take.svg?branch=master)](https://travis-ci.org/VitorLuizC/object-take)
 
-A really library, almost 150 bytes minified and gzipped, to take value from object using a string for path expression or returns a placeholder if value is undefined or unreachable.
+A really small library, almost 150 bytes minified and gzipped, to take value from object using a string for path expression or returns a placeholder if value is undefined or unreachable.
 
 It's approach is based on [idx](https://github.com/facebookincubator/idx), from Facebook, and a _insight_ from Vue.js meetup where @IgorHalfeld shows a way to get a property using eval. Yeah, eval.
 

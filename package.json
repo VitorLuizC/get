@@ -1,7 +1,7 @@
 {
   "name": "object-take",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.1.1",
+  "description": "A really small library, almost 150 bytes minified and gzipped, to take value from object using a string for path expression or returns a placeholder if value is undefined or unreachable.",
   "main": "dist/object-take.cjs.js",
   "types": "index.d.ts",
   "module": "dist/object-take.es.js",
