@@ -15,3 +15,4 @@ package-lock.json
 dist/
 index.js
 index.d.ts
+index.spec.js
