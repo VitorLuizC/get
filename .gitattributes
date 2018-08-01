@@ -1,0 +1,9 @@
+# Treat as text when is possible.
+* text=auto
+
+# Ensure Unix line-endings.
+* eol=lf
+
+# Don't shdow Yarn lockfile's merge conflicts.
+# Since version 1.0, Yarn automatically fix them.
+yarn.lock -diff
