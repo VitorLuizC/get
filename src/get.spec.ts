@@ -6,10 +6,10 @@ const response = {
     users: [
       {
         name: 'Bruce',
-        hobby: undefined
-      }
-    ]
-  }
+        hobby: undefined,
+      },
+    ],
+  },
 };
 
 test('Module exports a function', (context) => {

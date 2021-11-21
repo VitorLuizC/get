@@ -24,6 +24,8 @@
     "types/"
   ],
   "scripts": {
+    "lint": "prettier ./src/**/*.ts --check",
+    "lint:fix": "prettier ./src/**/*.ts --write",
     "test": "pnpm run test:compile && pnpm run test:unit",
     "test:unit": "ava src/**/*.spec.js",
     "test:compile": "tsc -p ./tsconfig.test.json",
@@ -51,5 +53,8 @@
     "rollup": "^2.60.0",
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "prettier": "^2.4.1"
   }
 }
