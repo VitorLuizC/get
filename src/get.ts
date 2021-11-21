@@ -7,9 +7,9 @@
  * ```
  * @param object
  * @param path - Path expression used to get value from object.
- * @param placeholder - Returned when value is undefined or unreachable.
+ * @param [placeholder] - Returned when value is undefined or unreachable.
  */
-const get = (object: object, path: string, placeholder?: any) => {
+function get(object: object, path: string, placeholder?: unknown): unknown {
   try {
     const expression = 'return o' + (path[0] !== '[' ? '.' + path : path);
     const value = new Function('o', expression)(object);
@@ -17,6 +17,6 @@ const get = (object: object, path: string, placeholder?: any) => {
   } catch (_) {
     return placeholder;
   }
-};
+}
 
 export default get;

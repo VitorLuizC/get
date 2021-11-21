@@ -17,7 +17,7 @@ const Option = (options) => ({
  * @type {import('rollup').RollupOptions}
  */
 const options = {
-  input: './index.js',
+  input: './src/get.js',
   output: [
     Option({
       file: './dist/get.js',

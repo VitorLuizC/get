@@ -1,4 +1,4 @@
-import get from './';
+import get from './get';
 import test from 'ava';
 
 const response = {
