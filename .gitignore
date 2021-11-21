@@ -2,20 +2,34 @@
 .DS_Store
 
 # Node.js modules.
-node_modules/
+/node_modules/
 
-# NPM's lockfile.
-package-lock.json
+# npm's shrinkwrap.
+# We're using `package-lock.json` instead.
+npm-shrinkwrap.json
+
+# Yarn's lockfile, Plug'n'Play, folder and settings.
+# We're using pnpm and it provide its own lockfile and settings.
+yarn.lock
+.pnp.*
+.yarn/
+.yarnrc
+.yarnrc.yaml
+
+# pnpm's lockfile.
+# The only allowed pnpm's lockfile is the root one.
+pnpm-lock.yaml
 
 # Log files.
 *.log
 *.log.*
 
-# Generate sources & type definitions.
-dist/
-types/
-index.js
-index.js.map
-index.d.ts
-index.d.ts.map
-index.spec.js
+# Compiled JavaScript modules and their source-maps.
+/src/**/*.js
+/src/**/*.js.map
+
+# Generated bundles and their source-maps.
+/dist
+
+# Generated type declarations and their source-maps.
+/types
