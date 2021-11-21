@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser';
  * @returns {import('rollup').OutputOptions}
  */
 const Option = (options) => ({
-  name: 'take',
+  name: 'get',
   exports: 'default',
   sourcemap: true,
   ...options,
@@ -20,27 +20,27 @@ const options = {
   input: './index.js',
   output: [
     Option({
-      file: './dist/object-take.js',
+      file: './dist/get.js',
       format: 'commonjs',
     }),
     Option({
-      file: './dist/object-take.cjs',
+      file: './dist/get.cjs',
       format: 'commonjs',
     }),
     Option({
-      file: './dist/object-take.esm.js',
+      file: './dist/get.esm.js',
       format: 'esm',
     }),
     Option({
-      file: './dist/object-take.mjs',
+      file: './dist/get.mjs',
       format: 'esm',
     }),
     Option({
-      file: './dist/object-take.umd.js',
+      file: './dist/get.umd.js',
       format: 'umd',
     }),
     Option({
-      file: './dist/object-take.umd.min.js',
+      file: './dist/get.umd.min.js',
       format: 'umd',
       plugins: [terser()],
     }),
