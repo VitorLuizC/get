@@ -1,6 +1,8 @@
 import type Path from './types/Path';
 import type TypeAtPath from './types/TypeAtPath';
 
+export type { Path, TypeAtPath };
+
 /**
  * Gets value from object using a string for its path expression, if value is
  * 'undefined' or unreachable returns the placeholder instead.
