@@ -2,6 +2,7 @@
   "name": "@bitty/get",
   "version": "1.0.0",
   "description": "A really small library, almost 150 bytes minified and gzipped, that gets a value from object using a path expression, and returns received placeholder when value is undefinedss or unreachable.",
+  "sideEffects": false,
   "cdn": "dist/get.umd.min.js",
   "main": "dist/get.js",
   "types": "types/get.d.ts",

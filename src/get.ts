@@ -4,12 +4,11 @@ import type TypeAtPath from './types/TypeAtPath';
 export type { Path, TypeAtPath };
 
 /**
- * Gets value from object using received path (with dots and positions), if
+ * Gets a nested value from an object using a path string (like 'a.b[0].d'). If
  * value is 'undefined' or unreachable returns the placeholder instead.
  *
  * @example
- * get(object, 'data.users[0].contact.phones[0]');
- * get(values, '[3].count', '0');
+ * const phone = get(response, 'data.users[0].contact.phones[0]', null);
  */
 function get<T, P extends Path<T>, U>(
   object: T,
@@ -25,15 +24,16 @@ function get<T, P extends Path<T>>(
 function get(object: unknown, path: string, placeholder?: unknown): unknown;
 
 /**
- * Gets value from object using received path (with dots and positions), if
+ * Gets a nested value from an object using a path string (like 'a.b[0].d'). If
  * value is 'undefined' or unreachable returns the placeholder instead.
+ *
  * @example ```js
- * get(object, 'data.users[0].contact.phones[0]');
- * get(values, '[3].count', '0');
+ * const phone = get(response, 'data.users[0].contact.phones[0]', null);
  * ```
+ *
  * @param {Object.<string, *>} object
- * @param {string} path - Path expression used to get value from object.
- * @param {*} [placeholder] - Returned when value is undefined or unreachable.
+ * @param {string} path
+ * @param {*} [placeholder]
  * @returns {*}
  */
 function get(object: any, path: string, placeholder?: any): any {
