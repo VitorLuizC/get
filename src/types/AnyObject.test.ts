@@ -10,7 +10,7 @@ test('matches any object', (context) => {
 
   const assertions: true[] = [
     true as Assert<AnyObject, {}>,
-    true as Assert<AnyObject, { name: string; }>,
+    true as Assert<AnyObject, { name: string }>,
     true as Assert<AnyObject, User>,
 
     // Also matches non-literal objects.
@@ -23,7 +23,7 @@ test('matches any object', (context) => {
   });
 });
 
-test('doesn\'t match primitive types object', (context) => {
+test("doesn't match primitive types object", (context) => {
   const assertions: false[] = [
     false as Assert<AnyObject, string>,
     false as Assert<AnyObject, boolean>,

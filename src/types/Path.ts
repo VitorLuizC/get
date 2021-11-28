@@ -1,9 +1,7 @@
 import type AnyObject from './AnyObject';
 import type Position from './Position';
 
-type Paths<P extends string, T> =
-  | P
-  | `${P}${NextPath<T>}`;
+type Paths<P extends string, T> = P | `${P}${NextPath<T>}`;
 
 // NOTE: Those "prettier-ignore" were placed because Prettier messes up the
 // ternaries in types, but besides that, they're working fine.
