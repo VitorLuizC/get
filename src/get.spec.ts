@@ -27,6 +27,5 @@ test('Can apply expressions to value', (context) => {
 
 test('Return placeholder when undefined or unreachable', (context) => {
   context.is(get(response, 'data.users[0].hobby', 'None'), 'None');
-  // @ts-expect-error checks if 'get' works when object is 'null' at runtime.
   context.is(get(null, 'data.users[1].name', 'Unknown'), 'Unknown');
 });
