@@ -1,7 +1,7 @@
 {
   "name": "@bitty/get",
   "version": "1.0.0",
-  "description": "A really small library, almost 150 bytes minified and gzipped, that gets a value from object using a path expression, and returns received placeholder when value is undefinedss or unreachable.",
+  "description": "A really small and type-safe (requires TypeScript >= 4.1.3) function, that gets a nested value from an object using a path string (like 'a.b[0].d'). If value is 'undefined' or unreachable returns the placeholder instead.",
   "sideEffects": false,
   "cdn": "dist/get.umd.min.js",
   "main": "dist/get.js",
@@ -23,6 +23,21 @@
   "files": [
     "dist/",
     "types/"
+  ],
+  "keywords": [
+    "get",
+    "key",
+    "nested",
+    "object",
+    "path",
+    "paths",
+    "prop",
+    "properties",
+    "property",
+    "props",
+    "segment",
+    "value",
+    "values"
   ],
   "scripts": {
     "lint": "prettier ./src/**/*.ts --check",
